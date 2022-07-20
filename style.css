@@ -1,0 +1,305 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*
+ BARVY
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+
+ POUZITE PISMO
+ Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+https://fonts.google.com/specimen/Source+Sans+Pro
+*/
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5; /* nastavení výšky řádku řádku */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+
+/* hlavička*/
+header {
+  color: #25133d;
+  font-size: 16px;
+}
+
+.nazev{
+  text-transform: uppercase;
+  padding: 3%;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav{
+  display: flex;
+}
+
+.menu{
+  padding: 3%;
+  flex-basis: content;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  background-color: #25133d;
+  color: white;
+}
+
+/*main*/
+.cast1{
+  background-image: url(images/pozadi.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.super_appka{
+  color: white;
+  font-weight: lighter;
+  padding: 2% 0 3% 4%;
+}
+
+/* 1.část main*/
+.super_appka h1{
+  margin: 0;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.super_appka p{
+  font-size: 24px;
+  margin: 5px 0 10px 0;
+}
+
+.odkaz {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.prvni{
+  width: 200px;
+  background-color: #48418e;
+  margin-top: 15px;
+}
+
+.druhy{
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+section a:hover,
+section a:focus,
+section a:active {
+  background-color: #25133d;
+  color: white;
+}
+
+.cast1 img{
+  width: 0;
+} 
+
+/* 2.část main*/
+.hlavni{    
+  text-align: center;
+  color: #48418e;
+  margin: 5% 7% 5% 7%;
+}
+
+.hlavni h2 {
+  font-size: 20px;
+}
+
+.hlavni img{
+  width: 75px;
+}
+
+.hlavni p{
+  font-size: 16px;
+}
+
+/*patička*/
+footer{
+  font-size: 14px;
+  text-align: center;
+  background-color: #48418e;
+  color: white;
+  padding: 2%;
+}
+
+/* tablet*/
+@media (min-width: 650px) and (max-width:1000px) {
+  /*hlavička*/
+  header{
+    width: 100%;
+    display: flex;
+    padding: 1% 0 0 2%;
+    
+  }
+
+  .nazev{
+    flex-basis:40%;
+    padding: 2%;
+    width: 40%;
+    height: 60px;
+  }
+
+  nav {
+    flex-basis: 60%;
+    text-align: left;
+    height: 60px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /*1.část main*/
+  .cast1{
+    display: flex;
+    position: relative;
+  }
+  .cast1 img{
+    width: 305px;
+    height: 300px;
+    overflow: auto;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .super_appka{
+    height: 350px;
+    padding: 5% 0 5% 3%;
+    flex-basis: 60%;
+  }
+  
+  .odkaz{
+    display: inline-block;
+    padding: 1%;
+  }
+
+  .prvni{
+    margin-right: 2%;
+  }
+
+  .mobil{
+    text-align: left;
+    flex-basis: 30%;
+    position: absolute;
+    right: 0;
+    top: 14%;
+  }
+
+  /*2.část main*/
+  .flex_tablet{
+    display: flex;
+  }
+  .hlavni{
+    margin: 0;
+    padding: 5% 3%;
+  }
+}
+
+@media (min-width: 1001px) {
+  /*hlavička*/
+  header{
+    width: 100%;
+    display: flex;
+    
+  }
+
+  .nazev{
+    flex-basis:40%;
+    width: 40%;
+    padding: 2% 0 0 2%;
+   
+  }
+
+  nav {
+    flex-basis: 60%;
+    text-align: left;
+   
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /*1.část main*/
+  .cast1{
+    display: flex;
+  }
+  .cast1 img{
+    width: 405px;
+    height: 400px;
+    overflow: auto;
+    right: 0;
+    bottom: 0;
+  }
+ 
+  .super_appka{
+    height: 350px;
+    padding: 5% 0 5% 3%;
+    height: 450px;
+  }
+
+  .super_appka h1{
+    font-size: 90px;
+  }
+  
+  .super_appka p{
+    font-size: 36px;
+  }
+  
+  .odkaz{
+    display: inline-block;
+    padding: 1%;
+  }
+
+  .prvni{
+    margin-right: 2%;
+  }
+
+  .mobil{
+    text-align: left;
+    flex-basis: 30%;
+    position: absolute;
+    right: 0;
+    top: 13%;
+  } /*tady už se nevím rady, jak dostat obrázek do rohu*/
+
+  /*2.část main*/
+  .flex_pc {
+    display: flex;
+    margin: 5% 10%;
+  }
+
+  .flex_tablet{
+    display: flex;
+    margin: 0;
+  }
+
+  .hlavni{
+    margin:0;
+  }
+
+  .bubliny{
+    margin: 0 8px;
+  }
+}
+
